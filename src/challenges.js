@@ -30,8 +30,9 @@ function concatName(arrayString) {
     index = arrayString.length -1
     lastName = arrayString[index]
   }
-  return lastName+",", firstName
+  return lastName+", "+ firstName
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let answer = (wins * 3) + ties
@@ -50,9 +51,14 @@ function highestCount(numbers) {
     return howMuch
   }
 
-highestCount([-2, -2, -1])
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1>cat2 && cat1> mouse) {
+    return cat2
+  }
+  else if(cat2>cat1 && cat2> mouse) {
+    return cat1
+  }
   // seu código aqui
 }
 

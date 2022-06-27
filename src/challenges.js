@@ -33,8 +33,9 @@ function concatName(arrayString) {
   return lastName+",", firstName
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let answer = (wins * 3) + ties
+  return answer
 }
 
 // Desafio 6

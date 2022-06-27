@@ -83,13 +83,52 @@ function fizzBuzz(array) {
 }
 return strings
 }
-fizzBuzz([9, 25])
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let word=phrase.split("")
+  for(let i=0; i<word.length; i+=1) {
+    if (word[i] == "a") {
+      word[i] = "1"
+    }
+    else if(word[i] == "e"){
+      word[i] = "2"
+    }
+    else if(word[i] == "i"){
+      word[i] = "3"
+    }
+    else if(word[i] == "o"){
+      word[i] = "4"
+    }
+    else if(word[i] == "u"){
+      word[i] = "5"
+   } 
+  }
+  phrase=word.join("")
+  return phrase
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(phrase) {
+  let word=phrase.split("")
+  for(let i=0; i<word.length; i+=1) {
+    if (word[i] == "1") {
+      word[i] = "a"
+    }
+    else if(word[i] == "2"){
+      word[i] = "e"
+    }
+    else if(word[i] == "3"){
+      word[i] = "i"
+    }
+    else if(word[i] == "4"){
+      word[i] = "o"
+    }
+    else if(word[i] == "5"){
+      word[i] = "u"
+   } 
+  }
+  phrase=word.join("")
+  return phrase
 }
 
 // Desafio 10

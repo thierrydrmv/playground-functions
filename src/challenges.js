@@ -116,10 +116,18 @@ function decode(phrase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let object = []
+  let error = "Vazio!"
+  for (let i = 0; i < array.length; i += 1) {
+    array.sort()
+    object.push({tech: array[i],name: string})
+  }
+  if (array == null || array == 0 || array == undefined) {
+    return error
+  }
+  return object
 }
-
 module.exports = {
   calcArea,
   catAndMouse,

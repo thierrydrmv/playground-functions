@@ -27,10 +27,15 @@ function generatePhoneNumber(array) {
 return "(" + arrayx.slice(0,2) + ") " + arrayx.slice(2,7) + "-" + arrayx.slice(7-11)
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false
+} else if (lineA < Math.abs(lineB-lineC) || lineB < Math.abs(lineA-lineC) || lineC < Math.abs(lineB-lineA)) {
+  return false
+} else {
+  return true
 }
-
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui

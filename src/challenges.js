@@ -123,7 +123,7 @@ function techList(array, string) {
     array.sort();
     object.push({ tech: array[i], name: string });
   }
-  if (array === null || array === 0 || array === undefined) {
+  if (array === null || array === 0) {
     return error;
   }
   return object;

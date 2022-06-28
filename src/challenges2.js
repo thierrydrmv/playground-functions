@@ -37,10 +37,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let number = /\d+/g;
+  let count = 0
+  let beer = string.match(number)
+  let arr = JSON.parse("[" + beer + "]")
+  for(let i=0; i<arr.length;i+=1) {
+    count = arr[i] + count
+  }
+  if (count>1) {
+    return count + ' copos de água'
+  }
+  else {
+    return count + ' copo de água'
+  }
 }
-
 module.exports = {
   generatePhoneNumber,
   hydrate,

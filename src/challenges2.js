@@ -1,24 +1,22 @@
 // Desafio 11
 function generatePhoneNumber(array) {
-  let arrayx = array.join("");
+  let arrayx = array.join('');
   let arrayy = [];
   let contador = 0;
   if (array.length > 11 || array.length < 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9 ) {
+    if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } 
-    else {
-      for (let y = 0; y < array.length; y += 1) {
-        if (array[i] === array[y]) {
-          contador += 1;
-        }
-      }
-      arrayy.push(contador);
-      contador = 0;
     }
+    for (let y = 0; y < array.length; y += 1) {
+      if (array[i] === array[y]) {
+        contador += 1;
+      }
+    }
+    arrayy.push(contador);
+    contador = 0;
     if (arrayy[i] >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }

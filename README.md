@@ -7,7 +7,7 @@
 The **Playground Functions** project is a resolution of a list of 13 javascript exercises.
 
 
-## 🚀 Build With
+## 🚀 Built With
 
 [![Javascript][Javascript]][Javascript-url]
 
